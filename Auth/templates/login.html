@@ -10,14 +10,9 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#" method="post">   
+            <form action="/signup" method="post">
+                {% csrf_token %}
                 <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
                 <div class="infield">
                     <input type="text" placeholder="Name" />
                     <label></label>
@@ -38,14 +33,9 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="/login" method="POST">
+            {% csrf_token %}
                 <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
                 <div class="infield">
                     <input type="email" placeholder="Email" name="email"/>
                     <label></label>
@@ -75,8 +65,8 @@
         </div>
     </div>
     
-    <!-- js code -->
-    <script src="{% static 'logincredential.js'%}"></script>
+    <!-- js code 
+    <script src="{% static 'logincredential.js'%}"></script> -->
 </div>
 </body>
 </html>
