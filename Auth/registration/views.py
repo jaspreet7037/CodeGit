@@ -25,17 +25,17 @@ def signup(request):
 
         messages.success(request, "Your account has been successfully created.")
 
-        return redirect('login')
+        return redirect('signin')
 
     return render(request, 'signup.html')
 
-def login(request):
+def signin(request):
 
     if request.method == 'POST':
         username = request.POST['username']
         pass1 = request.POST['pass1']
 
-        user = authenticate(username=username, pasword=pass1)
+        user = authenticate(username=username, password=pass1)
 
         if user is None:
             login(request, user)
@@ -44,9 +44,10 @@ def login(request):
 
         else:
             messages.error(request, "Incorrect Username & Password.")
+            return redirect('home')
             
 
-    return render(request, 'login.html')
+    return render(request, 'signin.html')
 
 def logout(request):
     pass
