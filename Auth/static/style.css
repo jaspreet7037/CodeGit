@@ -1,0 +1,198 @@
+/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: black;
+    overflow: hidden;
+}
+
+/* Logo style */
+.logo {
+    float: left;
+    padding: 10px 20px;
+    font-size: 24px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Mooli', sans-serif;
+}
+.logo a img{
+    width: 250px;
+    height: 60px;
+}
+
+/* Navigation links style */
+.nav-links {
+    list-style: none;
+    float: right;
+}
+
+.nav-links li {
+    float: left;
+    padding: 20px;
+    
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    position: relative; 
+    font-family: 'Mooli', sans-serif;
+}
+
+
+
+.nav-links li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Height of the line */
+    background-color: #fff; /* Color of the line */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Initial scale to hide the line */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::before {
+    transform: scaleX(1); /* Scale to show the line on hover */
+    transform-origin: bottom left;
+}
+
+/* Dropdown menu style */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+    transition: 3s;
+}
+
+.dropdown-content li {
+    display: block;
+    padding: 10px 20px;
+}
+
+.dropdown-content li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the profile option */
+.nav-links .profile {
+    padding: 10px 20px;
+}
+
+/* Media query for responsiveness (adjust breakpoints as needed) */
+@media screen and (max-width: 768px) {
+    .logo {
+        float: none;
+        text-align: center;
+    }
+
+    .nav-links {
+        float: none;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .nav-links li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        background-color: transparent;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #000;
+  }
+  
+  .text-container {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-container h1{
+     margin: 0; 
+    font-size: 120px;
+    margin-top: -80px;
+    color: rgba(225,225,225, .01);
+    background-image: url("https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2cf549433129d4227d1879347b9e78ce&auto=format&fit=crop&w=1248&q=80");
+    background-repeat: repeat;
+    background-clip: border-box;
+    -webkit-background-clip:text;
+    animation: animate 15s ease-in-out infinite;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+    @keyframes animate {
+      0%, 100% {
+        background-position: left top;
+      }
+      25%{
+        background-position: right bottom;
+       }
+      50% {
+        background-position: left bottom;
+      }
+      75% {
+        background-position: right top;
+      }   
+  }
+
+  .text-container h2{
+    color: rgb(161, 229, 240);
+    font-family: 'Mooli', sans-serif;
+    font-weight: 800;
+  }
+
+  .text-container button{
+    margin-top: 30px;
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(232, 42, 108);
+    font-size: 20px;
+    font-family: 'Mooli', sans-serif;
+    color: white;
+  }
+
+  
+  
+
+
+  

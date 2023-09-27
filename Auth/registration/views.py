@@ -6,14 +6,14 @@ from django.contrib.auth import authenticate, login, logout
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'home.html')
 
 def signup(request):
 
     if request.method == 'POST':
         #username = request.POST.get('username')
         username = request.POST['username']
-        name = request.POST['name']
+        fname = request.POST['fname']
         email = request.POST['email']
         pass1 = request.POST['pass1']
         pass2 = request.POST['pass2']
@@ -22,7 +22,7 @@ def signup(request):
             return HttpResponse("Your password are not same.")
 
         myuser = User.objects.create_user(username, email, pass1)
-        myuser.name = name
+        myuser.first_name = fname
 
         myuser.save()
 
@@ -42,8 +42,8 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            name = user.first_name
-            return render(request, "index.html", {'name':name})
+            fname = user.first_name
+            return render(request, "index.html", {'fname':fname})
 
         else:
             messages.error(request, "Incorrect Username & Password.")

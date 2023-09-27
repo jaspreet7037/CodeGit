@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Codehub</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <!-- <a href="#"><img src="logo.png" alt=""></a> -->
+            <h1> Code hub </h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="profileproject.html">Projects</a>
+                
+            </li>
+            <li><a href="#"><i class="fa-regular fa-user"></i></a>
+                <li>
+                    <a href="/signup">SignUp/SignIn</a>
+                </li>
+            </li>
+        </ul>
+    </nav>
+    <div class="text-container">
+        <h1>Code Hub</h1>
+        <h2> The Perfect And Amazing Platform For All Students And Developers</h2>
+        <button onclick="gotoprojects()"> Lets Explore </button>
+      </div>
+
+    <section class="second">
+        <div class="head">
+            <h1> Best Websites for </h1>
+            <h1> Developers </h1>
+            <h3> Here is your guide </h3>
+            <h3>  find the best and amazing Project and Explore different Ideas</h3>
+        </div>
+        <div class="second_image">
+            <img src="second_page_photo.jpg" alt="">
+        </div>
+
+    </section>  
+    <section class="third">
+        <div class="head">
+            <h1 id="third_heading"> Key Features </h1>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <img src="software.jpg" alt="Image 1" class="card_images">
+                <h2>Projects </h2>
+                <p>Search Projects over many topics</p>
+            </div>
+            <div class="card">
+                <img src="upload image.png" alt="Image 2" class="card_images">
+                <h2>Upload  Project</h2>
+                <p>showcase your skills by uploading your project </p>
+            </div>
+            <div class="card">
+                <img src="ideas.png" alt="Image 3" class="card_images">
+                <h2>find new ideas</h2>
+                <p>Find and search new ideas from projects </p>
+            </div>
+        </div>
+
+    </section>
+    <section class="footer">
+        <div class="footer_div">
+            <div class="cmplogo">
+
+                <img src="cmplogo.svg" alt="">
+                <h1> Code hub </h1>
+            </div>
+            <div class="listitems">
+                <h1> Code hub </h1>
+                <ul>
+                    <li>Projects</li>
+                    <li>Profile</li>
+                    <li>My Projects</li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+      <script>
+        function gotoprojects(){
+            window.location.href="projects.html";
+        }
+      </script>
+    
+</body>
+</html>
