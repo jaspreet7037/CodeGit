@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coding Projects</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'static/css/style2.css' %}">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+    body {
+      font-family: 'Mooli', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      font-family: 'Mooli', sans-serif;
+      text-align: center;
+      background-color: #010818;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #search-input {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-family: 'Mooli', sans-serif;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      font-family: 'Mooli', sans-serif;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: white;
+      border: 1px solid #007bff;
+      color: #007bff;
+    }
+
+    .repo-card {
+      background-color: #f3abab;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      transition: 0.5s;
+    }
+
+    .repo-card:hover{
+      transform: scale(1.05);
+    }
+
+    .repo-card h2 {
+      font-size: 18px;
+      margin: 0;
+      font-family: 'Mooli', sans-serif;
+    }
+
+    .repo-card p {
+      font-size: 14px;
+      color: #0b0000;
+      font-family: 'Mooli', sans-serif;
+    }
+
+    .repo-card a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Mooli', sans-serif;
+    }
+
+    .repo-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Coding Projects </h1>
+  <div class="container">
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Find your right project over here">
+      <button type="submit">Search</button>
+    </form>
+    <div id="search-results"></div>
+  </div>
+<!-- ... Your HTML code for the structure of the page ... -->
+{% load static %}
+<script src="{% static 'static/javascript/script.js' %}">
+    
+  </script>
+  
+  <!-- ... The rest of your HTML code ... -->
+  
+</body>
+</html>

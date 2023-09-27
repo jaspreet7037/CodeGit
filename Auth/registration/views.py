@@ -52,6 +52,12 @@ def signin(request):
 
     return render(request, 'signin.html')
 
+def projects(request):
+    return render(request, 'projects.html')
+
+def profileproject(request):
+    return render(request, 'profileproject.html')
+
 def signout(request):
     logout(request)
     messages.success(request, "logged out successfully!")
